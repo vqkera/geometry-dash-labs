@@ -1,0 +1,58 @@
+.app {
+  min-height: 100vh;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(0, 255, 255, 0.16), transparent 34%),
+    linear-gradient(135deg, #101625 0%, #0a0d14 55%, #05070d 100%);
+  color: #ffffff;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 32px;
+  align-items: center;
+  max-width: 1120px;
+  margin: 56px auto 28px;
+}
+
+.content {
+  padding: 24px;
+}
+
+.label {
+  display: inline-block;
+  margin: 0 0 16px;
+  padding: 8px 14px;
+  border: 1px solid #39f5ff;
+  border-radius: 999px;
+  color: #39f5ff;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: 58px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.description {
+  max-width: 560px;
+  margin: 22px 0 0;
+  color: #c7d2e5;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+@media (max-width: 850px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+}

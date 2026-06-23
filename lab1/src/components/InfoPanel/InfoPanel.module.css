@@ -1,0 +1,22 @@
+.panel {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.panel h2 {
+  margin: 0 0 18px;
+  font-size: 28px;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 22px;
+  color: #d8e4f8;
+  font-size: 17px;
+  line-height: 1.5;
+}

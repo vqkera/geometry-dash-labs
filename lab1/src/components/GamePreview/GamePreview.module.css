@@ -1,0 +1,75 @@
+.preview {
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.sky {
+  position: relative;
+  overflow: hidden;
+  min-height: 330px;
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, #1e2b5f 0%, #10192f 100%);
+  background-size: 36px 36px;
+}
+
+.platform {
+  position: absolute;
+  right: 0;
+  bottom: 52px;
+  left: 0;
+  height: 22px;
+  background: #39f5ff;
+  box-shadow: 0 0 24px rgba(57, 245, 255, 0.72);
+}
+
+.cube {
+  position: absolute;
+  left: 86px;
+  bottom: 74px;
+  width: 58px;
+  height: 58px;
+  border: 5px solid #ffffff;
+  border-radius: 8px;
+  background: #ffcc29;
+  box-shadow: 0 0 26px rgba(255, 204, 41, 0.7);
+  animation: cubeJump 1.7s ease-in-out infinite;
+}
+
+.spike,
+.spikeSmall {
+  position: absolute;
+  bottom: 74px;
+  width: 0;
+  height: 0;
+  border-right: 32px solid transparent;
+  border-bottom: 70px solid #ff3b6b;
+  border-left: 32px solid transparent;
+  filter: drop-shadow(0 0 14px rgba(255, 59, 107, 0.6));
+}
+
+.spike {
+  right: 118px;
+}
+
+.spikeSmall {
+  right: 62px;
+  transform: scale(0.74);
+  transform-origin: bottom;
+}
+
+@keyframes cubeJump {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  45% {
+    transform: translateY(-92px) rotate(135deg);
+  }
+}

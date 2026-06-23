@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 18px 22px;
+  border: 1px solid rgba(57, 245, 255, 0.28);
+  border-radius: 18px;
+  background: rgba(7, 12, 24, 0.74);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #39f5ff;
+  color: #06101d;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.nav {
+  display: flex;
+  gap: 22px;
+  color: #d9e4f5;
+  font-size: 15px;
+}
+
+@media (max-width: 620px) {
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
