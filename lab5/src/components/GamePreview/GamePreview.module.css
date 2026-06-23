@@ -1,0 +1,195 @@
+.preview {
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.caption {
+  margin: 0 0 6px;
+  color: #39f5ff;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.topBar h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.scoreList {
+  display: flex;
+  gap: 12px;
+}
+
+.scoreItem {
+  min-width: 92px;
+  padding: 10px 12px;
+  border: 1px solid rgba(57, 245, 255, 0.3);
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.22);
+  text-align: center;
+}
+
+.scoreItem span {
+  display: block;
+  margin-bottom: 4px;
+  color: #aebbd0;
+  font-size: 13px;
+}
+
+.scoreItem strong {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.gameField {
+  position: relative;
+  overflow: hidden;
+  height: 360px;
+  border-radius: 18px;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, #1e2b5f 0%, #10192f 100%);
+  background-size: 36px 36px;
+  cursor: pointer;
+}
+
+.cloud,
+.cloudSmall {
+  position: absolute;
+  top: 52px;
+  width: 92px;
+  height: 26px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.cloud {
+  left: 70px;
+}
+
+.cloudSmall {
+  top: 96px;
+  right: 88px;
+  width: 68px;
+  height: 20px;
+}
+
+.player {
+  position: absolute;
+  bottom: 74px;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  border: 5px solid #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 26px rgba(255, 255, 255, 0.25);
+  transition: transform 0.04s linear;
+}
+
+.player span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #101625;
+  box-shadow: 18px 0 0 #101625;
+}
+
+.obstacle {
+  position: absolute;
+  bottom: 74px;
+  z-index: 2;
+  height: 54px;
+  background: #ff3b6b;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  filter: drop-shadow(0 0 14px rgba(255, 59, 107, 0.6));
+}
+
+.ground {
+  position: absolute;
+  right: 0;
+  bottom: 56px;
+  left: 0;
+  height: 18px;
+  background: #39f5ff;
+  box-shadow: 0 0 24px rgba(57, 245, 255, 0.72);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  background: rgba(5, 7, 13, 0.34);
+}
+
+.overlay p {
+  margin: 0;
+  padding: 12px 18px;
+  border: 1px solid rgba(57, 245, 255, 0.42);
+  border-radius: 999px;
+  background: rgba(5, 7, 13, 0.78);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.controls p {
+  margin: 0;
+  color: #c7d2e5;
+  line-height: 1.5;
+}
+
+.controls button {
+  min-width: 128px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 14px;
+  background: #39f5ff;
+  color: #06101d;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  filter: brightness(1.08);
+}
+
+@media (max-width: 700px) {
+  .topBar,
+  .controls {
+    flex-direction: column;
+  }
+
+  .scoreList {
+    width: 100%;
+  }
+
+  .scoreItem {
+    flex: 1;
+  }
+
+  .gameField {
+    height: 320px;
+  }
+}

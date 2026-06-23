@@ -1,0 +1,23 @@
+.app {
+  min-height: 100vh;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(0, 255, 255, 0.16), transparent 34%),
+    linear-gradient(135deg, #101625 0%, #0a0d14 55%, #05070d 100%);
+  color: #ffffff;
+}
+
+.page {
+  max-width: 1180px;
+  margin: 46px auto 0;
+}
+
+@media (max-width: 700px) {
+  .app {
+    padding: 18px;
+  }
+
+  .page {
+    margin-top: 28px;
+  }
+}
